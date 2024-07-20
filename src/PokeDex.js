@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PokemonSelect from "./PokemonSelect";
 import PokemonCard from "./PokemonCard";
 import useAxios from "./useAxios";
