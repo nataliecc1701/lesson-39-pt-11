@@ -10,7 +10,11 @@ function useAxios(baseURL) {
         setArr(arr => [...arr, {...response.data, id: uuid() }])
     }
     
-    return [arr, requestAndAddToArr]
+    const clear = function () {
+        setArr([])
+    }
+    
+    return [arr, requestAndAddToArr, clear]
 }
 
 export default useAxios;
