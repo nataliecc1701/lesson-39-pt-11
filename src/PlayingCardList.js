@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PlayingCard from "./PlayingCard";
 import useAxios from "./useAxios";
 import formatPlayingCard from "./formatPlayingCard";
@@ -9,7 +9,8 @@ import "./PlayingCardList.css";
 function CardTable() {
   const [cards, addCard, clear] = useAxios(
     "https://deckofcardsapi.com/api/deck/new/draw",
-    formatPlayingCard
+    formatPlayingCard,
+    "cards"
   );
   const handleButtonClick = (evt) => {
     addCard();

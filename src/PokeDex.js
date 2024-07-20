@@ -11,7 +11,8 @@ import "./PokeDex.css";
 function PokeDex() {
   const [pokemon, addPokemon, clear] = useAxios(
     "https://pokeapi.co/api/v2/pokemon",
-    formatPokemon
+    formatPokemon,
+    "pokemon"
   );
   return (
     <div className="PokeDex">
